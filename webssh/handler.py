@@ -254,12 +254,12 @@ class MixinHandler(object):
                     # redirecting
                     return False
 
-            if options.fbidhttp:
-                if ip_address is None:
-                    ip_address = to_ip_address(ip)
-                if not ip_address.is_private:
-                    logging.warning('Public plain http request is forbidden.')
-                    return True
+#            if options.fbidhttp:
+#                if ip_address is None:
+#                    ip_address = to_ip_address(ip)
+#                if not ip_address.is_private:
+#                    logging.warning('Public plain http request is forbidden.')
+#                    return True
 
     def get_redirect_url(self, hostname, port, uri):
         port = '' if port == 443 else ':%s' % port
